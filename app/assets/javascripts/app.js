@@ -35,6 +35,7 @@ AppDispatcher.register(function(payload) {
   switch(action) {
     case Constants.ADD_COMMENT:
       Store.addComment(payload.comment);
+      Store.emitChange();
       break;
     default:
       // NO-OP
